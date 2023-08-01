@@ -7,7 +7,7 @@ export default function Wsws() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const res = await fetch(`https://api.rss2json.com/v1/api.json?api_key=kiu9hxfe1661vn0cmz3jpj8dueorj0idmiucugqr&rss_url=https://www.wsws.org/en/rss.xml`);
+                const res = await fetch(`https://api.rss2json.com/v1/api.json?api_key=kiu9hxfe1661vn0cmz3jpj8dueorj0idmiucugqr&rss_url=https://rss.nytimes.com/services/xml/rss/nyt/US.xml`);
                 const data = await res.json();
                 const items = data.items.slice(0, 20);
                 setItems(items);
@@ -32,17 +32,18 @@ export default function Wsws() {
                   {items.map((item, index) => (
                       <div key={index}>
                           <a href={item.link} target={"_blank"}>
-                              <h3>{item.title}</h3>
+                              <h3 className="article-title">{item.title}</h3>
                           </a>
+                          <span className="pubdate">Published On {item.pubDate}</span>
                       </div>
                   ))}
               </ul>
               <a
-                  href={"https://www.wsws.org/"}
+                  href={"https://www.nytimes.com/"}
                   target={"_blank"}
                   rel={"noopener noreferrer"}
               >
-                  Read More on World Socialist Website
+                  Read More on New York Times
               </a>
           </div>
       </section>

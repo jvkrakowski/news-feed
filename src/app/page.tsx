@@ -12,11 +12,11 @@ export default function Home() {
 
         <div className="grid grid-cols-6 grid-rows-1 gap-4">
           <div className="box col-span-3">
-            <Link href="/InSoc">International Socialist News</Link>
+            <Link href="/InSoc">CNN News</Link>
 
           </div>
           <div className="box col-span-3 col-start-4">
-          <Link href="/Wsws">World Socialist Website</Link>
+          <Link href="/Wsws">New York Times</Link>
           </div>
         </div>
 

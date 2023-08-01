@@ -17,7 +17,7 @@
 }
 
 body {
-  background: url(https://i.ibb.co/GHsF8HN/2-agustus-5.jpg) no-repeat; 
+  background: #202020; 
   background-size: cover;
   min-height: 100vh;
   min-width: 100vw;
@@ -30,12 +30,7 @@ header {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: rgba(239, 35, 60, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(239, 35, 60, 0.3);
+  background: #b81d18;
   width: auto;
   min-height: 150px ;
   margin-top: 15px;
@@ -52,24 +47,34 @@ header h1{
 }
 
 .box {
-  background: rgba(239, 35, 60, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(239, 35, 60, 0.3);
+  background: #004687;
   margin-top: 15px;
   padding: 15px;
+  color: white;
 }
 
-.box1 {
-  background: rgba(239, 35, 60, 0.52);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(239, 35, 60, 0.3);
+.box:nth-child(2n) {
+  background: #f0f0f0;
+  color: black;
+}
+
+.article-title {
 margin-top: 15px;
 margin-bottom: 15px;
 padding: 15px;
+background: #004687;
+font-size: 1.6em;
+color: white;
+}
+
+.pubdate {
+  background: #b6b6b6;
+  padding: 15px;
+  margin-left: 20px;
+  display: block;
+}
+
+.summary {
+  color: white;
+  margin: 35px;
 }

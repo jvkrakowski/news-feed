@@ -7,11 +7,11 @@ export default function InterSoc() {
   return (
     <main>
       <header>
-        <h1>World Sociaists Website</h1>
+        <h1>New York Times</h1>
        </header> 
 
        <div className="grid grid-cols-6 grid-rows-1 gap-4">
-        <div className="box1 col-span-6">
+        <div className=" col-span-6">
             <Wsws />
         </div>
         </div>

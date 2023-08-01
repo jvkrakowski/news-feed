@@ -7,7 +7,7 @@ export default function InSoc() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const res = await fetch(`https://api.rss2json.com/v1/api.json?api_key=kiu9hxfe1661vn0cmz3jpj8dueorj0idmiucugqr&rss_url=https://internationalsocialist.net/en/rss`);
+                const res = await fetch(`https://api.rss2json.com/v1/api.json?api_key=kiu9hxfe1661vn0cmz3jpj8dueorj0idmiucugqr&rss_url=http://rss.cnn.com/rss/cnn_topstories.rss`);
                 const data = await res.json();
                 const items = data.items.slice(0, 20);
                 setItems(items);
@@ -33,20 +33,18 @@ export default function InSoc() {
                   {items.map((item, index) => (
                       <div key={index}>
                           <a href={item.link} target={"_blank"}>
-                              <h3>{item.title}</h3>
-                              <p>Published On {item.pubDate}</p>
-                              <p>By {item.author}</p>
-                              <p>{item.description}</p>
-                          </a>
+                              <h3 className="article-title">{item.title}</h3></a>
+                              <span className="pubdate">Published On {item.pubDate}</span>
+                          
                       </div>
                   ))}
               </ul>
               <a
-                  href={"https://internationalsocialist.net"}
+                  href={"https://cnn.com"}
                   target={"_blank"}
                   rel={"noopener noreferrer"}
               >
-                  Read More on International Socialist
+                  Read More on CNN News
               </a>
           </div>
       </section>
