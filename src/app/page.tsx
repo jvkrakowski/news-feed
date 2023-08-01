@@ -16,7 +16,7 @@ export default function Home() {
 
           </div>
           <div className="box col-span-3 col-start-4">
-          <Link href="/InSoc">International Socialist News</Link>
+          <Link href="/Wsws">World Socialist Website</Link>
           </div>
         </div>
 
